@@ -36,6 +36,12 @@ public class Main {
     break;
 }
 
+    case 3 -> {
+        a.sapXepDS();
+        a.hienDSSinhVien();
+    break;
+}
+    
     default->{}
 }
 }

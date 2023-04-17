@@ -4,6 +4,8 @@
  */
 package QuanlySV;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 /**
@@ -43,7 +45,25 @@ public class QuanLy {
         System.out.println("|=============================================|");
         System.out.println("|1. Nhap thong tin sinh vien                  |");
         System.out.println("|2. Xuat ban danh sach sinh vien              |");
+        System.out.println("|3. Xuat ban danh sach sinh vien da xap xep   |");
         System.out.println("|============Nhap phim 0 de thoat=============|");
     }
    
+    public void sapXepDS(){
+        Collections.sort(this.dssinhvien, new Comparator<SinhVienNhap>(){
+        @Override
+        public int compare(SinhVienNhap svn1, SinhVienNhap svn2){
+                if(svn1.getMaSV() < svn2.getMaSV()){
+                    return 1;
+                }
+                else if(svn1.getMaSV() > svn2.getMaSV()){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+            }
+        });
+    }
+    
 }

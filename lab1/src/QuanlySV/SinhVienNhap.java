@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class SinhVienNhap {
     
-    private String maSV;
+    private int maSV;
     private String hoTen;
     private String diaChi;
     private String sTD;
@@ -20,18 +20,18 @@ public class SinhVienNhap {
     public SinhVienNhap() {
     }
 
-    public SinhVienNhap(String maSV, String hoTen, String diaChi, String sTD) {
+    public SinhVienNhap(int maSV, String hoTen, String diaChi, String sTD) {
         this.maSV = maSV;
         this.hoTen = hoTen;
         this.diaChi = diaChi;
         this.sTD = sTD;
     }
 
-    public String getMaSV() {
+    public int getMaSV() {
         return maSV;
     }
 
-    public void setMaSV(String maSV) {
+    public void setMaSV(int maSV) {
         this.maSV = maSV;
     }
 
@@ -59,21 +59,16 @@ public class SinhVienNhap {
         this.sTD = sTD;
     }
 
-    @Override
-    public String toString() {
-        return "SinhVienNhap{" + "maSV=" + maSV + ", hoTen=" + hoTen + ", diaChi=" + diaChi + ", SDT=" + sTD + '}';
-    }
-    
     public void nhap(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap ma sinh vien: ");
-        maSV = sc.nextLine();
         System.out.println("Nhap ho ten sinh vien: ");
         hoTen = sc.nextLine();
         System.out.println("Nhap dia chi sinh vien: ");
         diaChi = sc.nextLine();
         System.out.println("Nhap SDT: ");
         sTD = sc.nextLine();
+        System.out.println("Nhap ma sinh vien: ");
+        maSV = sc.nextInt();
     }
     
     public void hien(){
