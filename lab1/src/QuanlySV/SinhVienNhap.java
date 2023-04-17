@@ -66,7 +66,6 @@ public class SinhVienNhap {
     
     public void nhap(){
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Nhap ma sinh vien: ");
         maSV = sc.nextLine();
         System.out.println("Nhap ho ten sinh vien: ");
@@ -77,10 +76,8 @@ public class SinhVienNhap {
         sTD = sc.nextLine();
     }
     
-    public void menu(){
-        System.out.println("|=============================================|");
-        System.out.println("|1. Nhap thong tin sinh vien                  |");
-        System.out.println("|2. Xuat ban danh sach sinh vien              |");
-        System.out.println("|============Nhap phim 0 de thoat=============|");
+    public void hien(){
+        System.out.println("SinhVienNhap{" + "MaSoSinhVien: " + getMaSV() + ", Hoten: " + getHoTen() + ", DiaChi: " + getDiaChi() + ", SoDienThoai: " + getsTD() + "}");
     }
+    
 }

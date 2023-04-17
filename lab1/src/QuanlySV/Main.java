@@ -13,28 +13,26 @@ import java.util.Scanner;
 public class Main {
  
     public static void main(String[] args) {
+        QuanLy a = new QuanLy();
+        SinhVienNhap b;
         SinhVienNhap svn = new SinhVienNhap();
         int n;
         Scanner sc = new Scanner(System.in);
     do{
-    svn.menu();
+    a.menu();
     System.out.print("Lua chon: ");
     n= sc.nextInt();
     switch(n)
 {
         
     case 1 -> {
-        System.out.print("Nhap so luong can them: ");
-        n = sc.nextInt();
-        for (int i = 0; i < n; i++){
-        System.out.println("Lan nhap thu " + (i + 1) + ": ");
-        svn.nhap();
-        }
+        b = new SinhVienNhap();
+        a.themDSSinhVien(svn);
     break;
 }
 
     case 2 -> {
-        System.out.println(""+svn.toString());
+        a.hienDSSinhVien();
     break;
 }
 
